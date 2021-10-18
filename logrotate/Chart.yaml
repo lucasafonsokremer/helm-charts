@@ -1,5 +1,11 @@
 apiVersion: v2
 name: logrotate
 description: logrotate chart that runs on kubernetes
-type: application
 version: 1.0.0
+keywords:
+  - logrotate
+  - kubernetes
+home: https://github.com/lucasafonsokremer/helm-charts/logrotate
+maintainers:
+- name: Lucas Afonso Kremer
+  url: linkedin.com/lucasafonsokremer
