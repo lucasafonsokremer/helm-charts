@@ -10,7 +10,7 @@ logrotate:
 
   image:
     name: lucasafonsokremer/kubernetes-logrotate
-    tag: "1.0.3"
+    tag: "1.0.4"
     pullPolicy: IfNotPresent
 
   rbac:
@@ -27,7 +27,7 @@ logrotate:
 
   config:
     k8sRotatorConf: |-
-      /var/lib/docker/volumes/*/*.log {
+      /var/lib/docker/volumes/**/*.log {
         rotate 1
         copytruncate
         missingok
@@ -37,5 +37,5 @@ logrotate:
         daily
         create 0644 root root
         dateext
-        dateformat -logrotate-%Y-%m-%d-%H-%M
+        dateformat -%Y%m%d%H%M
       }
